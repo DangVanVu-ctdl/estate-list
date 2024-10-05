@@ -4,7 +4,7 @@ from PropertyVariables import ProperyPricePred
 import pandas as pd
 import joblib
 
-# 1.  Creating the App object ##test 
+# 1.  Creating the App object 
 PropertyPricePredApp = FastAPI()
 
 # 2.  Load the model from disk
