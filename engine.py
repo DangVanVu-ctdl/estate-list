@@ -16,7 +16,7 @@ script_number = int(input("Enter 1 to train the model \nEnter 2 to use the fasta
 if script_number == 1:
 
     # reading the data
-    df = utils.read_data('input\Pune Real Estate Data.xlsx')
+    df = utils.read_data(r'input\Pune Real Estate Data.xlsx')
 
     # preprocess data and generate features
     df1= preprocessing.preprocess_data(df)
