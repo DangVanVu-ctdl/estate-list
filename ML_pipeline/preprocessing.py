@@ -1,10 +1,14 @@
 # importing libraries
 import pandas as pd
 import numpy as np
+import sys
+sys.path.append(r'e:\11Estate-Price\modular_code')
+
 from ML_pipeline import utils
 import re
 from sklearn.feature_extraction.text import CountVectorizer
 from collections import Counter
+
 
 # NLP data preprocessing and feature extraction helper functions
 import nltk
@@ -167,7 +171,7 @@ def sum_of_cols(df, col_list, newcol):
 
 # Text cleaning
 # Preprocessing the text data
-REPLACE_BY_SPACE_RE = re.compile("[/(){}\[\]\|@,;!]")
+REPLACE_BY_SPACE_RE = re.compile(r"[/(){}\[\]\|@,;!]")
 BAD_SYMBOLS_RE = re.compile("[^0-9a-z #+_]")
 STOPWORDS_nlp = set(stopwords.words('english'))
 
@@ -198,7 +202,7 @@ def text_prepare(text):
         return: modified initial string
     """
     try:
-        text = text.replace("\d+"," ") # removing digits
+        text = text.replace(r"\d+"," ") # removing digits
         text = re.sub(r"(?:\@|https?\://)\S+", "", text) #removing mentions and urls
         text = text.lower() # lowercase text
         text =  re.sub('[0-9]+', '', text)
