@@ -86,7 +86,7 @@ def clean_numbers(df, col):
     try:
         newcol = col + ' Cleaned'
         numbers = re.compile(r"[-+]?(\d*\.\d+|\d+)") 
-        df[newcol] = (df[col].apply(lambda x: np.float(numbers.findall(str(x))[0]) 
+        df[newcol] = (df[col].apply(lambda x: np.float64(numbers.findall(str(x))[0]) 
                                                            if len(numbers.findall(str(x)))>0 else np.nan ))
     except Exception as e:
         print(e)
@@ -120,10 +120,10 @@ def avg_area_calculator(df, col):
             x = numbers.findall(x)
             # if a single number is given, return that as area
             if len(x) == 1:
-                return np.float(x[0])
+                return np.float64(x[0])
             # if a range is given, calculate average and return that as area
             elif len(x) == 2:
-                return (np.float(x[0])+np.float(x[1]))/2
+                return (np.float64(x[0])+ np.float64(x[1]))/2
             else:
                 return -99
         except Exception as e:
