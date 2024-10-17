@@ -3,8 +3,8 @@ from fastapi import FastAPI
 from PropertyVariables import ProperyPricePred
 import pandas as pd
 import joblib
-## thử nhé 
-# 1.  Creating the App object 
+
+# 1.  Creating the App object  
 PropertyPricePredApp = FastAPI()
 
 # 2.  Load the model from disk
