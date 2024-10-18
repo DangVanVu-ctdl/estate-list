@@ -246,7 +246,7 @@ def count_vectorize(df,textcol,ngrams,max_features):
         # cv = CountVectorizer()
         cv_object = cv.fit(df[textcol])
         X = cv_object.transform(df[textcol])
-        df_ngram = pd.DataFrame(X.toarray(),columns=cv_object.get_feature_names())
+        df_ngram = pd.DataFrame(X.toarray(),columns=cv_object.get_feature_names_out())
         # Adding this to the main dataframe
         df_final = pd.concat([df.reset_index(drop=True),df_ngram.reset_index(drop=True)],axis=1)
     except Exception as e:

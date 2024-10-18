@@ -7,6 +7,8 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
+
+
 # Select the script to run, training (script 1) or web application (script 2)
 script_number = int(input("Enter 1 to train the model \nEnter 2 to use the fastapi application: "))
 

@@ -3,6 +3,9 @@ from fastapi import FastAPI
 from PropertyVariables import ProperyPricePred
 import pandas as pd
 import joblib
+# download_nltk_data.py
+import nltk
+nltk.download('punkt_tab')
 
 
 # 1.  Creating the App object  
