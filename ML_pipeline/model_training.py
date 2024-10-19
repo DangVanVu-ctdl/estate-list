@@ -11,7 +11,7 @@ from sklearn.metrics import r2_score
 
 
 def split_train_test(df, target_variable, size, seed):
-    '''df: dataframe
+    '''df: dataframe 
        target_variable: target feature name
        size: test size ratio
        seed: random state'''

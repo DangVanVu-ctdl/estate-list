@@ -25,4 +25,4 @@ class ProperyPricePred(BaseModel):
     quality_specification: float 
     stories_offering: float 
     towers_stories: float 
-    world_class: float 
+    world_class: float

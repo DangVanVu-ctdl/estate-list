@@ -4,7 +4,7 @@ from PropertyVariables import ProperyPricePred
 import pandas as pd
 import joblib
 # download_nltk_data.py
-import nltk
+import nltk 
 nltk.download('punkt_tab')
 
 
